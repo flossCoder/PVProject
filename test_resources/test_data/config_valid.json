@@ -1,0 +1,100 @@
+{
+    "wd": "testpath",
+    "separator": ";",
+    "db.name": "pvdb.db",
+    "data": {
+        "data.columns": [
+            "timestamp",
+            "1.1",
+            "1.2",
+            "1.3",
+            "Production",
+            "Consumption"
+        ],
+        "data.db.columns": [
+            "timestamp",
+            "Production_1_1",
+            "Production_1_2",
+            "Production_1_3",
+            "Production",
+            "Consumption"
+        ]
+    },
+    "db.types": {
+        "timestamp": "DATE",
+        "Production_1_1": "REAL",
+        "Production_1_2": "REAL",
+        "Production_1_3": "REAL",
+        "Production": "REAL",
+        "Consumption": "REAL",
+        "tracker_name": "TEXT",
+        "direction": "REAL",
+        "inclination_angle": "REAL",
+        "latitude": "REAL",
+        "longitude": "REAL",
+        "solar_panel_width": "REAL",
+        "solar_panel_height": "REAL",
+        "solar_panel_energy_conversion_efficiency": "REAL",
+        "solar_panel_number": "REAL"
+    },
+    "db.tables": {
+        "main.raw": {
+            "table.name": "main_raw",
+            "columns": [
+                "timestamp",
+                "Production",
+                "Consumption"
+            ],
+            "primary": [
+                "timestamp"
+            ]
+        },
+        "tracker.raw": {
+            "table.name": "tracker_raw",
+            "columns": [
+                "timestamp",
+                "tracker_name",
+                "Production"
+            ],
+            "primary": [
+                "timestamp",
+                "tracker_name"
+            ]
+        },
+        "tracker.meta": {
+            "table.name": "tracker_meta",
+            "columns": [
+                "tracker_name",
+                "direction",
+                "inclination_angle",
+                "latitude",
+                "longitude",
+                "solar_panel_width",
+                "solar_panel_height",
+                "solar_panel_energy_conversion_efficiency",
+                "solar_panel_number"
+            ],
+            "primary": [
+                "tracker_name"
+            ]
+        }
+    },
+    "tracker.names": [
+        "Production_1_1",
+        "Production_1_2",
+        "Production_1_3"
+    ],
+    "tracker.meta.data": {
+        "A" : {
+            "tracker_name": "A",
+            "direction": "59",
+            "inclination_angle": "53",
+            "latitude": "52.37352",
+            "longitude": "7.10110",
+            "solar_panel_width": "1755",
+            "solar_panel_height": "1038",
+            "solar_panel_energy_conversion_efficiency": "19.9",
+            "solar_panel_number": "10"
+        }
+    }
+}
